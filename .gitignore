@@ -1,0 +1,8 @@
+*.aux
+*.out
+*.synctex*
+*.bbl
+*.log
+*.blg
+.DS_Store
+SIGCHI2015LaTex.zip
