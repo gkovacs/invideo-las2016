@@ -1,109 +1,31 @@
-\documentclass{sigchi}
+\def\year{2015}
+%File: formatting-instruction.tex
+\documentclass[letterpaper]{article}
+\usepackage{aaai}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{graphicx}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\pdfinfo{
+/Title (Insert Your Title Here)
+/Author (Put All Your Authors Here, Separated by Commas)}
+\setcounter{secnumdepth}{0}  
+ \begin{document}
+% The file aaai.sty is the style file for AAAI Press 
+% proceedings, working notes, and technical reports.
+%
 
-% Use this command to override the default ACM copyright statement (e.g. for preprints). 
-% Consult the conference website for the camera-ready copyright statement.
-
-
-%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
-% \toappear{Permission to make digital or hard copies of all or part of this work for personal or classroom use is 	granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
-% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
-% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
-% DOI string from ACM form confirmation}
-%% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
-
-
-% Arabic page numbers for submission. 
-% Remove this line to eliminate page numbers for the camera ready copy
-% \pagenumbering{arabic}
-
-
-% Load basic packages
-\usepackage{balance}  % to better equalize the last page
-\usepackage{graphics} % for EPS, load graphicx instead
-\usepackage{times}    % comment if you want LaTeX's default font
-\usepackage{url}      % llt: nicely formatted URLs
-
-% llt: Define a global style for URLs, rather that the default one
-\makeatletter
-\def\url@leostyle{%
-  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
-\makeatother
-\urlstyle{leo}
-
-
-% To make various LaTeX processors do the right thing with page size.
-\def\pprw{8.5in}
-\def\pprh{11in}
-\special{papersize=\pprw,\pprh}
-\setlength{\paperwidth}{\pprw}
-\setlength{\paperheight}{\pprh}
-\setlength{\pdfpagewidth}{\pprw}
-\setlength{\pdfpageheight}{\pprh}
-
-% Make sure hyperref comes last of your loaded packages, 
-% to give it a fighting chance of not being over-written, 
-% since its job is to redefine many LaTeX commands.
-\usepackage[pdftex]{hyperref}
-\hypersetup{
-pdftitle={Effects of In-Video Quizzes on Lecture Viewing Behavior in Coursera},
-pdfauthor={LaTeX},
-pdfkeywords={SIGCHI, proceedings, archival format},
-bookmarksnumbered,
-pdfstartview={FitH},
-colorlinks,
-citecolor=black,
-filecolor=black,
-linkcolor=black,
-urlcolor=black,
-breaklinks=true,
-}
-
-% create a shortcut to typeset table headings
-\newcommand\tabhead[1]{\small\textbf{#1}}
-
-
-% End of preamble. Here it comes the document.
-\begin{document}
-
-\title{Effects of In-Video Quizzes on Lecture Viewing in Coursera}
-
-\numberofauthors{3}
-\author{
-  \alignauthor 1st Author Name\\
-    \affaddr{Affiliation}\\
-    \affaddr{Address}\\
-    \email{e-mail address}\\
-    \affaddr{Optional phone number}
-  \alignauthor 2nd Author Name\\
-    \affaddr{Affiliation}\\
-    \affaddr{Address}\\
-    \email{e-mail address}\\
-    \affaddr{Optional phone number}    
-  \alignauthor 3rd Author Name\\
-    \affaddr{Affiliation}\\
-    \affaddr{Address}\\
-    \email{e-mail address}\\
-    \affaddr{Optional phone number}
-}
+\title{Effects of In-Video Quizzes on Lecture Viewing on Coursera}
+\author{Anonymized for Review}
 
 \maketitle
 
 \begin{abstract}
-In this paper we look at how users interact with quizzes embedded inside lecture videos (in-video quizzes) by analyzing video viewing logs on Coursera, a platform for hosting Massive Online Open Courses (MOOCs). We find that in-video quizzes are a common source and destination of video seeks. These seeks reflect behaviors such as searching for answers to the in-video quizzes within the video. There are spikes in view counts in the portions of the video surrounding in-video quizzes, as a result of reviewing and rewatching. We observe that some users follow quiz-oriented video navigation strategies, such as seeking directly from the start of the video to in-video quizzes, or between in-video quizzes. We discuss implications that these findings have on the design of online courses and MOOC platforms. % Other sources of seeks to in-video quizzes include the preceding section, where the learner may have found an answer. Potential design implications for video-viewing interfaces include making sure that users are easily able to refer to in-video quizzes. % suggest that video-viewing interface designs should make it easy for learners to refer to in-video quizzes. % Our findings that learners' rewatching and seeking activity peaks near in-video quizzes suggests that interfaces should enable learners to easily refer back to in-video quizzes.
+Online courses on sites such as Coursera use quizzes embedded inside lecture videos (in-video quizzes) to test learners' understanding and help them master the course material. In this paper we analyze logs from the Machine Learning course on Coursera to see how users interact with in-video quizzes, and how in-video quizzes influence users' lecture viewing behavior. We find that in-video quizzes are a common source and destination of video seeks. These seeks reflect behaviors such as searching for answers to the in-video quizzes within the video. There are spikes in view counts in portions of the video surrounding in-video quizzes, as a result of reviewing and rewatching. We observe that some users follow quiz-oriented video navigation strategies, such as seeking directly from the start of the video to in-video quizzes, or between in-video quizzes. We discuss implications that our findings have on the design of online courses and MOOC platforms. % Other sources of seeks to in-video quizzes include the preceding section, where the learner may have found an answer. Potential design implications for video-viewing interfaces include making sure that users are easily able to refer to in-video quizzes. % suggest that video-viewing interface designs should make it easy for learners to refer to in-video quizzes. % Our findings that learners' rewatching and seeking activity peaks near in-video quizzes suggests that interfaces should enable learners to easily refer back to in-video quizzes.
 \end{abstract}
-
-\keywords{
-	in-video quizzes; video analysis; log analysis; seeking; rewatching; Coursera; MOOC; online education \newline
-}
-
-\category{H.5.1.}{Information Interfaces and Presentation (e.g. HCI)}{Multimedia Information Systems: Video}
-
-\begin{figure}
-%\centering
-\includegraphics[width=1.0\columnwidth]{coursera}
-\caption{An in-video quiz, from the ML4 course on Coursera. In-video quizzes are auto-graded questions embedded into a video and shown at a certain timestamp. They can be either multiple choice, multiple selection, or numeric free-response. Their locations are indicated on the progressbar by a yellow tick.}
-\label{fig:coursera}
-\end{figure}
 
 \section{Introduction}
 
@@ -112,6 +34,13 @@ In-video quizzes, which are commonly featured in courses on platforms such as Co
 In-video quizzes differ from standard quizzes in that users do not leave the video viewer interface when they encounter a quiz, so users can easily seek elsewhere upon encountering the quiz -- seeking backward to find answers to the quiz, seeking forward to skip the quiz, etc.
 The presence of in-video quizzes inside videos can thus influence users' video viewing behaviors,
 relative to the default linear video-viewing model.
+
+\begin{figure}
+%\centering
+\includegraphics[width=1.0\columnwidth]{coursera}
+\caption{An in-video quiz, from the ML4 course on Coursera. In-video quizzes are auto-graded questions embedded into a video and shown at a certain timestamp. They can be either multiple choice, multiple selection, or numeric free-response. Their locations are indicated on the progressbar by a yellow tick.}
+\label{fig:coursera}
+\end{figure}
 
 In this paper, we analyze video-viewing logs of the Machine Learning course, iteration 4 on Coursera. We identify and discuss a set of video viewing behaviors associated with in-video quizzes that we observe in these logs, specifically:
 
@@ -208,7 +137,8 @@ We observed inconsistencies in the view logs for some users (roughly 1\%) -- for
 
 \section{In-Video Quiz Answering Rates}
 
-TODO: Statistics on:
+% TODO: Statistics on:
+In this section we analyze:
 
 \begin{enumerate}
 \item What percent of users who start watching the video reach the in-video quiz? (ie, play a point in the video that is at or past the in-video quiz)
@@ -325,6 +255,6 @@ We have presented ways that in-video quizzes influence users' video watching beh
 \item In-video quizzes are a common destination of seek chains within videos. Users tend to seek from the preceding video segment where the answer can be found, from the beginning of the video, or from the preceding in-video quiz.
 \end{itemize}
 
-\bibliographystyle{acm-sigchi}
+\bibliographystyle{aaai}
 \bibliography{invideo}
 \end{document}
