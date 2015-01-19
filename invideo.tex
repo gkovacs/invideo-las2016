@@ -89,7 +89,7 @@ breaklinks=true,
 \maketitle
 
 \begin{abstract}
-In this paper we describe viewing patterns that emerge as a result of in-video quizzes on the Coursera MOOC platform. We find that there tend to be spikes in rewatching in the portions of the video surrounding in-video quizzes, especially during rewatching sessions. In-video quizzes are both a common source and destination of video seeks. There are spikes in seeking backwards from in-video quiz locations, which suggests users are locating quiz answers. Users do not tend to use forward-seeking to skip over in-video quizzes. Some users seek directly from the start of the video to in-video quizzes, and from one in-video quiz to the next. Other sources of seeks to in-video quizzes include the preceding section, where the learner may have found an answer. Our findings that learners' rewatching and seeking activity peaks near in-video quizzes suggests that interfaces should enable learners to easily refer back to in-video quizzes.
+In this paper we describe how users interact with quizzes embedded inside lecture videos (in-video quizzes) by analyzing video viewing logs on the Coursera MOOC platform. We find that in-video quizzes are a common source and destination of video seeks. These seeks reflect behaviors such as searching for answers to the in-video quizzes within the video. There are spikes in view counts and backwards seeks in the portions of the video surrounding in-video quizzes, as a result of reviewing and rewatching. We observe that some users follow quiz-oriented video navigation strategies, such as seeking directly from the start of the video to in-video quizzes, or between in-video quizzes. We discuss implications that these findings have on the design of lecture videos and MOOC platforms. % Other sources of seeks to in-video quizzes include the preceding section, where the learner may have found an answer. Potential design implications for video-viewing interfaces include making sure that users are easily able to refer to in-video quizzes. % suggest that video-viewing interface designs should make it easy for learners to refer to in-video quizzes. % Our findings that learners' rewatching and seeking activity peaks near in-video quizzes suggests that interfaces should enable learners to easily refer back to in-video quizzes.
 \end{abstract}
 
 \keywords{
@@ -113,11 +113,11 @@ In-video quizzes differ from standard quizzes in that users do not leave the vid
 The presence of in-video quizzes inside videos can thus influence users' video viewing behaviors,
 relative to the default linear video-viewing model.
 
-In this paper, we analyze video-viewing logs of the Machine Learning course, iteration 4 on Coursera. We identify and discuss a set of video viewing behaviors associated with in-video quizzes that we observe from these logs, specifically:
+In this paper, we analyze video-viewing logs of the Machine Learning course, iteration 4 on Coursera. We identify and discuss a set of video viewing behaviors associated with in-video quizzes that we observe in these logs, specifically:
 
 \begin{itemize}
-\item The region preceding in-video quizzes are common destination for video seeks
-\item In-video quizzes are a common sources of video seeks
+\item The region preceding in-video quizzes are a common destination for video seeks.
+\item In-video quizzes are a common sources of video seeks.
 \item Users often seek backward from in-video quizzes to find the answer to the in-video quiz.
 \item Some users appear to be following a strategy of seeking directly to the in-video quizzes
 \item Some users tend to jump from one in-video quiz to the next, skipping the video segments
@@ -206,11 +206,23 @@ We observed inconsistencies in the view logs for some users (roughly 1\%) -- for
 \label{fig:fwdseek13}
 \end{figure}
 
+\section{In-Video Quiz Answering Rates}
+
+TODO: Statistics on:
+
+\begin{enumerate}
+\item What percent of users who start watching the video reach the in-video quiz? (ie, play a point in the video that is at or past the in-video quiz)
+\item What percent of users who reach the in-video quiz attempt it? What percent skip over it (play a point in the video that is past the in-video quiz, but is not at the quiz)? What percent press the play/skip button (reach the in-video quiz, but continue playing without having submitted an answer)?
+\item What percent of users who attempt in-video quizzes eventually answer them correctly? What is the mean number of tries before a correct answer? What percent of users navigate away from the in-video quiz before answering it correctly? How many navigations away on average?
+\end{enumerate}
+
 \section{Increased rewatching near in-video quizzes}
 
 We hypothesized that if encountering in-video quizzes is causing users to try to find answers to the quiz question in the video, this should be reflected in the viewing logs. Namely, we would expect to see increased re-watching of the portion prior to the in-video quiz where the answer is located, as well as seeks that originate from the in-video quiz and go backwards to where the answer was located. We show examples of these phenomenon in this section.
 
 We see in Figure~\ref{fig:videoviewsall} that the portion of the video preceding the in-video quiz tends to receive more views. We also observe in that figure a trend of less views for portions of the video that occur later, which can be explained as in-video dropout, which occurs as a consequence of users tending to watch videos linearly \cite{juho}.
+
+To measure how much more, we did a linear regression on the videos
 
 We believe the increase in number of views surrounding the in-video quiz is due to the user rewatching the portion preceding the in-video quiz, perhaps hoping to find an answer to the quiz. Indeed, if we exclude each user's first-time watch, and look only at what users are rewatching in aggregate, we still observe this peak in number of rewatches around the first in-video quiz, as shown in Figure~\ref{fig:rewatches}. This effect is further amplified if we observe users' behaviors in a seperate rewatching session that occurs at least 1 hour after they initially open the. We find that in these rewatching sessions, many will just seek directly to the in-video quiz, as indicated in Figure~\ref{fig:rewatchingsessions}.
 
