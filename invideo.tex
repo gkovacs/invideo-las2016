@@ -1,31 +1,105 @@
-\def\year{2015}
-%File: formatting-instruction.tex
-\documentclass[letterpaper]{article}
-\usepackage{aaai}
-\usepackage{times}
-\usepackage{helvet}
-\usepackage{courier}
-\usepackage{graphicx}
-\frenchspacing
-\setlength{\pdfpagewidth}{8.5in}
-\setlength{\pdfpageheight}{11in}
-\pdfinfo{
-/Title (Effects of In-Video Quizzes on Lecture Viewing on Coursera)
-/Author (Anonymized for Submission)}
-\setcounter{secnumdepth}{0}  
- \begin{document}
-% The file aaai.sty is the style file for AAAI Press 
-% proceedings, working notes, and technical reports.
-%
+\documentclass{sigchi}
 
-\title{Effects of In-Video Quizzes on Lecture Viewing on Coursera}
-\author{Anonymized for Submission}
+% Use this command to override the default ACM copyright statement
+% (e.g. for preprints).  Consult the conference website for the
+% camera-ready copyright statement.
+
+
+%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+% \toappear{Permission to make digital or hard copies of all or part of this work for personal or classroom use is      granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
+% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
+% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
+% DOI string from ACM form confirmation}
+%% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+
+
+% Arabic page numbers for submission.  Remove this line to eliminate
+% page numbers for the camera ready copy 
+
+%\pagenumbering{arabic}
+
+% Load basic packages
+\usepackage{balance}  % to better equalize the last page
+\usepackage{graphics} % for EPS, load graphicx instead 
+%\usepackage[T1]{fontenc}
+\usepackage{txfonts}
+\usepackage{times}    % comment if you want LaTeX's default font
+\usepackage[pdftex]{hyperref}
+% \usepackage{url}      % llt: nicely formatted URLs
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{ccicons}
+\usepackage{todonotes}
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, to give it a
+% fighting chance of not being over-written, since its job is to
+% redefine many LaTeX commands.
+\definecolor{linkColor}{RGB}{6,125,233}
+\hypersetup{%
+  pdftitle={SIGCHI Conference Proceedings Format},
+  pdfauthor={LaTeX},
+  pdfkeywords={SIGCHI, proceedings, archival format},
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=linkColor,
+  breaklinks=true,
+}
+
+% create a shortcut to typeset table headings
+% \newcommand\tabhead[1]{\small\textbf{#1}}
+
+% End of preamble. Here it comes the document.
+\begin{document}
+
+\title{Effects of In-Video Quizzes on MOOC Lecture Viewing}
+
+\numberofauthors{3}
+\author{%
+  \alignauthor{1st Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{City, Country}\\
+    \email{e-mail address}}\\
+  \alignauthor{2nd Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{City, Country}\\
+    \email{e-mail address}}\\
+  \alignauthor{3rd Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{City, Country}\\
+    \email{e-mail address}}\\
+}
 
 \maketitle
 
 \begin{abstract}
 Online courses on sites such as Coursera use quizzes embedded inside lecture videos (in-video quizzes) to test learners' understanding of the video. This paper analyzes how users interact with in-video quizzes, and how in-video quizzes influence users' lecture viewing behavior. We analyze the viewing logs of users who took the Machine Learning course on Coursera. We find that in-video quizzes are a common source and destination of video seeks. These seeks reflect behaviors such as searching for answers to the in-video quizzes within the video. We observe spikes in view counts in portions of the video surrounding in-video quizzes, as a result of reviewing and rewatching. Some users appear to use quiz-oriented video navigation strategies, such as seeking directly from the start of the video to in-video quizzes, or between in-video quizzes. We discuss implications that our findings have on the design of online courses and MOOC platforms. % Other sources of seeks to in-video quizzes include the preceding section, where the learner may have found an answer. Potential design implications for video-viewing interfaces include making sure that users are easily able to refer to in-video quizzes. % suggest that video-viewing interface designs should make it easy for learners to refer to in-video quizzes. % Our findings that learners' rewatching and seeking activity peaks near in-video quizzes suggests that interfaces should enable learners to easily refer back to in-video quizzes.
 \end{abstract}
+
+\keywords{in-video quizzes; lecture viewing; lecture navigation; seeking behaviors; MOOCs}
+
+\category{H.5.m.}{Information Interfaces and Presentation
+  (e.g. HCI)}{Miscellaneous}
 
 \section{Introduction}
 
@@ -302,6 +376,6 @@ We have presented ways that in-video quizzes influence users' video watching beh
 
 Anonymized for submission
 
-\bibliographystyle{aaai}
+\bibliographystyle{SIGCHI-Reference-Format}
 \bibliography{invideo}
 \end{document}
