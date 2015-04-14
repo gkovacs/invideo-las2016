@@ -103,10 +103,10 @@ Online courses on sites such as Coursera use quizzes embedded inside lecture vid
 
 \section{Introduction}
 
-In-video quizzes, which are commonly featured in courses on platforms such as Coursera, are questions that users are asked to answer upon reaching a certain point in the video, as shown in \autoref{fig:coursera}. In-video quizzes are auto-graded; the majority we observe in the Machine Learning course and other courses on Coursera are either multiple-choice or multiple-selection, though there also exist a few numeric-response quizzes.
+In-video quizzes, which are commonly found in courses on platforms such as Coursera, are questions that users are asked to answer upon reaching a certain point in the video, as shown in \autoref{fig:coursera}. In-video quizzes are auto-graded; the majority we observe in courses like the Machine Learning course on Coursera are either multiple-choice or multiple-checkbox, though there also exist a few numeric-response quizzes.
 
 In-video quizzes differ from standard quizzes in that users do not leave the video viewer interface when they encounter a quiz, so users can easily seek elsewhere upon encountering the quiz -- seeking backward to find answers to the quiz, seeking forward to skip the quiz, etc.
-The presence of in-video quizzes inside videos can thus influence users' video viewing behaviors, potentially causing more seeks and other non-linear viewing behaviors.
+The presence of in-video quizzes inside videos can thus influence users' video viewing behaviors, potentially causing seeking and other nonlinear video navigation behaviors. %non-linear viewing behaviors.
 
 \begin{figure}
 %\centering
@@ -115,7 +115,7 @@ The presence of in-video quizzes inside videos can thus influence users' video v
 \label{fig:coursera}
 \end{figure}
 
-In this paper, we analyze video-viewing logs of the Machine Learning course, iteration 4 on Coursera (ML4). We identify and discuss a set of video viewing behaviors associated with in-video quizzes that we observe in these logs, specifically:
+In this paper, we analyze video-viewing logs of the fourth iteration of the Machine Learning course on Coursera (ML4). We identify and discuss a set of video viewing behaviors associated with in-video quizzes that we observe in these logs, specifically:
 
 \begin{itemize}
 \item The region preceding each in-video quiz is a common destination of video seeks.
@@ -132,7 +132,7 @@ These behaviors suggest that certain viewers attach high importance to in-video 
 
 \section{Related Work}
 
-Kim et al perform an analysis of reasons for peaks in viewing and seeking while viewing lectures \cite{juho}. They find that users steadily leave videos over time, a phenomenon they refer to as \emph{video dropout}, and that visual transitions, such as slide transitions, tend to result in \emph{interaction peaks}, such as users seeking back to the previous slide. They also present a video viewer that encourages video navigation to interaction peaks  \cite{juho2}. However, the courses that they perform their video log analysis on do not have in-video quizzes, hence they are unable to report on viewing peaks and seeking behaviors that result from in-video quizzes. We similarly found in our own analysis that there are many peaks in seeking behavior that can be accounted for by slide transitions, however in-video quizzes tend to also be a major factor in causing peaks in video seeking.
+Kim et al perform an analysis of reasons for peaks in viewing and seeking while viewing lectures \cite{juho}. They find that users steadily leave videos over time, a phenomenon they refer to as \emph{in-video dropout}, and that visual transitions, such as slide transitions, tend to result in \emph{interaction peaks}, such as users seeking back to the previous slide. They also present a video viewer that encourages video navigation to interaction peaks  \cite{juho2}. However, the courses that they perform their video log analysis on do not have in-video quizzes, hence they are unable to report on viewing peaks and seeking behaviors that result from in-video quizzes. We similarly found in our own analysis that there are many peaks in seeking behavior that can be accounted for by slide transitions, however in-video quizzes tend to also be a major factor in causing peaks in video seeking.
 
 Guo et al discuss the effects of video properties on such as video length on viewer engagement \cite{guovideo}. They find that users become less engaged as videos grow longer, which is related to the problem of in-video dropout. However, they do not analyze the effects on in-video quizzes on viewer engagement, because the courses they analyze do not have in-video quizzes. In this paper, we argue that in-video quizzes encourage viewer engagement, as indicated by the increase in rewatching and seeking behavior in the regions of the video surrounding the in-video quiz.
 
