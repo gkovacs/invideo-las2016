@@ -96,7 +96,7 @@
 \maketitle
 
 \begin{abstract}
-Online courses on sites such as Coursera use quizzes embedded inside lecture videos (\textit{in-video quizzes}) to test learners' understanding of the video. This paper analyzes how users interact with in-video quizzes, and how in-video quizzes influence users' lecture viewing behavior. We analyze the viewing logs of users who took the Machine Learning course on Coursera. We find that in-video quizzes are a common source and destination of video seeks. These seeks reflect behaviors such as searching for answers to quizzes within the video. We observe spikes in view counts in portions of the video surrounding in-video quizzes, as a result of reviewing and rewatching. Some users appear to use quiz-oriented video navigation strategies, such as seeking directly from the start of the video to in-video quizzes, or between in-video quizzes. We discuss implications that our findings have on the design of online courses and MOOC platforms. % Other sources of seeks to in-video quizzes include the preceding section, where the learner may have found an answer. Potential design implications for video-viewing interfaces include making sure that users are easily able to refer to in-video quizzes. % suggest that video-viewing interface designs should make it easy for learners to refer to in-video quizzes. % Our findings that learners' rewatching and seeking activity peaks near in-video quizzes suggests that interfaces should enable learners to easily refer back to in-video quizzes.
+Online courses on sites such as Coursera use quizzes embedded inside lecture videos (\textit{in-video quizzes}) to help learners test their understanding of the video. This paper analyzes how users interact with in-video quizzes, and how in-video quizzes influence users' lecture viewing behavior. We analyze the viewing logs of users who took the Machine Learning course on Coursera. We find that in-video quizzes are a common source and destination of video seeks. These seeks reflect behaviors such as searching for answers to quizzes within the video. We observe spikes in view counts in portions of the video surrounding in-video quizzes, as a result of reviewing and rewatching. Some users appear to use quiz-oriented video navigation strategies, such as seeking directly from the start of the video to in-video quizzes, or skipping from one in-video quiz to the next. We discuss implications that our findings have on the design of online courses and lecture-viewing platforms. % and MOOC platforms. % Other sources of seeks to in-video quizzes include the preceding section, where the learner may have found an answer. Potential design implications for video-viewing interfaces include making sure that users are easily able to refer to in-video quizzes. % suggest that video-viewing interface designs should make it easy for learners to refer to in-video quizzes. % Our findings that learners' rewatching and seeking activity peaks near in-video quizzes suggests that interfaces should enable learners to easily refer back to in-video quizzes.
 \end{abstract}
 
 \keywords{in-video quizzes; lecture viewing; lecture navigation; seeking behaviors; MOOCs}
@@ -141,7 +141,9 @@ Guo et al analyzed the effects of video properties on such as video length on vi
 
 Guo et al analyzed factors that contribute to nonlinear navigation through MOOCs \cite{guodemographics}. They discuss examples of nonlinear navigation such as jumping back to previous lectures, rewatching videos, and going back from asssements to refer to lectures. Our present work is focused on navigation within videos as opposed to within MOOCs. However, we find that in-video quizzes, being a form of assessment that is embedded into the videos, trigger similar backjumps and reviews within a video that Guo et al discuss at the course-level in their paper.
 
-Andersson et al found that learners differ in the ways they engage with online courses: some only watch videos (``viewers''), some only do assignments (``solvers''), and some do both (``all-rounders'') \cite{ashton}. These differences between learners' engagement patterns are relevant to our work analyzing in-video quizzes, as they help explain why we find that some users' viewing behaviors seem to be aimed towards solving in-video quizzes rather than watching videos.
+Anderson et al found that learners differ in the ways they engage with online courses: some only watch videos (``viewers''), some only do assignments (``solvers''), and some do both (``all-rounders'') \cite{ashton}. These differences between learners' engagement patterns are relevant to our work analyzing in-video quizzes, as they help explain why we find that some users' viewing behaviors seem to be aimed towards solving in-video quizzes rather than watching videos.
+
+
 
 %  The courses they analyzed were previous offerings of the Machine Learning course on Coursera that is the focus of this work. 
 % , and we have found that their findings still apply in the fourth iteration of the course
@@ -235,7 +237,7 @@ Users also seek backward from in-video quizzes at 55x the baseline rate. As we w
 \label{fig:table-of-seeks}
 \end{figure}
 
-\pagebreak
+%\pagebreak
 
 \subsection{Lengths and Directions of Seek Chains}
 
@@ -320,7 +322,7 @@ Because Coursera does not enforce that users take in-video quizzes, we wondered 
 
 Now, we will look at the seek chains across all 113 videos and 109 in-video quizzes in the course.
 
-\pagebreak
+%\pagebreak
 
 %\section{Analysis of Seek Chains by Visualizing Seeking over All Videos}
 \section{Visualizing Seeking over All Videos}
