@@ -124,20 +124,24 @@ The presence of in-video quizzes inside videos can thus influence users' video v
 \begin{figure}
 %\centering
 \includegraphics[width=1.0\columnwidth]{coursera}
-\caption{An in-video quiz, from the ML4 course on Coursera. In-video quizzes are auto-graded questions embedded into a video and shown at a certain timestamp. They can be either multiple choice, multiple selection, or numeric free-response. Their locations are indicated on the progressbar by a yellow tick.}
+\caption{An in-video quiz on Coursera. In-video quizzes are short questions that are shown upon reaching certain points in the video.}
+% \caption{An in-video quiz, from the ML4 course on Coursera. In-video quizzes are auto-graded questions embedded into a video and shown at a certain timestamp. They can be either multiple choice, multiple selection, or numeric free-response. Their locations are indicated on the progressbar by a yellow tick.}
 \label{fig:coursera}
 \end{figure}
 
-In this paper, we analyze video-viewing logs of the fourth iteration of the Machine Learning course on Coursera (ML4). We discuss a set of video viewing behaviors associated with in-video quizzes that we observe in these logs, specifically:
+In this paper, we aim to learn more about how learners engage with in-video quizzes, and what effects quizzes have on their engagement with the rest of the video. We do this by analyzing the video-viewing logs of the Machine Learning course on Coursera (ML4). We discovered the following engagement patterns associated with in-video quizzes:
+
+% In this paper, we analyze video-viewing logs of the fourth iteration of the Machine Learning course on Coursera (ML4). We discuss a set of video viewing behaviors associated with in-video quizzes that we observe in these logs, specifically:
 
 \begin{compactitem}
+\item Users engage with in-video quizzes -- a similar number attempt quizzes to those who finish watching lectures.
 \item Users commonly seek forward to the region preceding each in-video quiz.
 \item Users commonly seek backwards from in-video quizzes, which may indicate they are trying to find the answer.
 \item Users sometimes jump directly from the start of the video to in-video quizzes, or jump from one in-video quiz to the next, skipping the video segments.
-\item Users do not tend to skip over in-video quizzes, either in the forward or backward direction. They thus segment the video into smaller subunits that users do not skip between.
+\item Users do not tend to skip over in-video quizzes, either in the forward or backward direction. %The quizzes thus segment the video into subunits that users do not skip between.
 \end{compactitem}
 
-These behaviors suggest that viewers consider in-video quizzes to be a priority and frequently refer to them. They also suggest that video-viewing interfaces should perhaps make it easier for users to refer back to in-video quizzes while viewing and reviewing videos. % between in-video quizzes and the preceding segment where the answers can be found.
+These behaviors suggest that viewers consider in-video quizzes to be a priority and frequently refer to them. These quiz-centric viewing behaviors can inform the design of future MOOC lecture-viewing interfaces, to make it easier for users to engage with in-video quizzes while viewing videos. % refer back to in-video quizzes while viewing and reviewing videos. % between in-video quizzes and the preceding segment where the answers can be found.
 
 \newpage
 
