@@ -120,7 +120,7 @@ In-video quizzes are beneficial because they provide learners with a way to test
 
 % In-video quizzes are auto-graded -- they can ask users to answer a multiple-choice or multiple-checkbox question, or to fill in a numeric response. Hence, they can provide users with rapid feedback and explanations, which are helpful for learning \cite{formativefeedback}.
 
-In-video quizzes differ from other assessments in that they are displayed directly in the video viewer, so users can easily seek elsewhere upon encountering the quiz -- seeking backward to find answers to the quiz, seeking forward to skip the quiz, etc.
+In-video quizzes differ from other assessments in that they are displayed directly in the video viewer, so users can easily seek elsewhere upon encountering the quiz -- seeking backward to review material related to the quiz, seeking forward to skip the quiz, etc.
 The presence of in-video quizzes inside videos can thus influence users' video viewing behaviors, potentially causing nonlinear navigation patterns such as seeking. %non-linear viewing behaviors.
 
 \begin{figure}
@@ -258,7 +258,7 @@ A limitation of Coursera's dataset is that if the user closes their browser wind
 
 The sources and destinations of seek chains are shown in \autoref{fig:seek-sources-and-destinations-table}. We see that in-video quizzes are a popular destination of seeks, particularly in the forward direction -- users seek forward to the in-video quiz at 4x the baseline rate of all seek chain destinations. Given the high answering rate for in-video quizzes we showed in \autoref{fig:user-engagement-with-material}, this suggests that these seeks originate from users who want to answer the in-video quiz at that point. Note that Coursera's interface does not have any UI features for seeking to in-video quizzes apart from the progress bar, so the only way to reach the in-video quiz is to seek to a segment of video right before it. Hence, we consider seek chains which terminate at most 10 seconds before the in-video quiz to also represent users intending to do the in-video quiz.
 
-Users also seek backward from in-video quizzes at 55x the baseline rate. As we will show, these represent users reviewing the preceding section, likely trying to find answers to the in-video quiz.
+Users also seek backward from in-video quizzes at 55x the baseline rate. As we will show, these represent users reviewing the preceding section, likely trying to find material that will help them answer the in-video quiz. % find answers to the in-video quiz.
 
 %First, we will analyze where users tend to seek to in videos, and what causes them to seek there. Prior work has found that . However, we find that in-video quizzes.
 
@@ -296,7 +296,7 @@ As we saw in \autoref{fig:seek-sources-and-destinations-table}, there are many s
 \label{fig:seek-destinations-near-quizzes}
 \end{figure}
 
-\autoref{fig:seek-destinations-near-quizzes} illustrates where users seek to near in-video quizzes, averaged across all 109 quizzes. As we can see, the 10 seconds immediately preceding the in-video quiz are a popular destination of seeks, both in the forward and backward directions. Seek chains in the forward direction arriving just before the in-video quizzes may reflect users who intend to go to the in-video quiz -- Coursera's interface does not provide a means of going to an in-video quiz, other than seeking to the immediately preceding portion and playing the video. Seek chains in the back direction arriving just before the in-video quizzes may reflect users who are reviewing the video to find answers to the in-video quiz. We observe a spike in back-seek destinations at exactly 10 seconds before the in-video quiz. This is likely users who are seeking backwards from the in-video quiz using the back arrow key on their keyboards, which causes a backward seek of exactly 10 seconds.
+\autoref{fig:seek-destinations-near-quizzes} illustrates where users seek to near in-video quizzes, averaged across all 109 quizzes. As we can see, the 10 seconds immediately preceding the in-video quiz are a popular destination of seeks, both in the forward and backward directions. Seek chains in the forward direction arriving just before the in-video quizzes may reflect users who intend to go to the in-video quiz -- Coursera's interface does not provide a means of going to an in-video quiz, other than seeking to the immediately preceding portion and playing the video. Seek chains in the back direction arriving just before the in-video quizzes may reflect users who are reviewing the video to help them answer the in-video quiz. We observe a spike in back-seek destinations at exactly 10 seconds before the in-video quiz. This is likely users who are seeking backwards from the in-video quiz using the back arrow key on their keyboards, which causes a backward seek of exactly 10 seconds.
 
 \section{Viewing Behavior in Individual Lectures}
 
@@ -326,9 +326,11 @@ As shown in \autoref{fig:lec13-multiplot}, in-video quizzes are a popular destin
 
 \subsection{Increased Rewatching near In-Video Quizzes}
 
-We hypothesized that if users try to find answers in the preceding video upon encountering an in-video quiz, this should be reflected in the viewing logs. Namely, we would expect to see increased re-watching of the portion prior to the in-video quiz where the answer is located. Therefore, we anticipate seeks that originate from the in-video quiz and go backwards to the point where the answer is located. We show examples of these phenomenon in this section.
+We hypothesized that if users search for relevant material in the preceding segment upon encountering an in-video quiz, this should be reflected in the viewing logs. Namely, we would expect to see increased re-watching of the portion prior to the in-video quiz. We would also expect to see seeks that originate from the in-video quiz and go backwards to the preceding section, which contains material related to the quiz. We show examples of these phenomenon in this section.
 
-We see in \autoref{fig:lec13-multiplot} E that the portion of the video surrounding the in-video quiz tends to receive more views. We also observe a trend of fewer views for portions of the video that occur later, which can be explained by in-video dropout, which occurs as a consequence of users' tendency to watch videos linearly \cite{juho}.
+We see in \autoref{fig:lec13-multiplot} E that the portion of the video surrounding the in-video quiz tends to receive more views. We also observe a trend of fewer views for portions of the video that occur later, which can be explained by in-video dropout \cite{juho}.
+
+% We see in \autoref{fig:lec13-multiplot} E that the portion of the video surrounding the in-video quiz tends to receive more views. We also observe a trend of fewer views for portions of the video that occur later, which can be explained by in-video dropout, which occurs as a consequence of users' tendency to watch videos linearly \cite{juho}.
 
 We believe the increase in number of views surrounding the in-video quiz is due to users rewatching the portion preceding the in-video quiz, perhaps hoping to find an answer to the quiz. Indeed, if we exclude each user's first-time watch, and look only at what users are rewatching in aggregate, we still observe this peak in number of rewatches around the first in-video quiz, as shown in \autoref{fig:lec13-multiplot} F. % This effect is further amplified if we observe users' behaviors in a seperate rewatching session that occurs at least 1 hour after they initially open the. We find that in these rewatching sessions, many will just seek directly to the in-video quiz, as indicated in \autoref{fig:rewatchingsessions}.
 
@@ -337,6 +339,12 @@ We believe the increase in number of views surrounding the in-video quiz is due 
 % We also observe a peak in the number of backwards seek chains that cross regions surrounding the in-video quiz, as shown in \autoref{fig:backseeks}. Backwards seek chains originating from the in-video quiz itself can be attributed to user behavior where the user is seeking backwards to find an answer to the in-video quiz. Backwards seek chains originating from past the in-video quiz can be attributed to users wishing to review the content tested in the in-video quiz.
 
 Because Coursera does not require users to take in-video quizzes, we wondered whether users explicitly skip across in-video quizzes to avoid taking them. As illustrated in \autoref{fig:lec13-multiplot} B, we found that this does not tend to be the case. On the contrary, there is actually a dip in the number of forward seeks that cross over the in-video quiz, so users are explicitly trying not to skip the in-video quizzes. This low number of forward seeks crossing over the last in-video quiz in this example might be attributed to the fact that it is located towards the end of the video, so the user may be aware that there is no new content to find towards the end. However, if we look at the first in-video quiz in the example, we also observe a dip in the number of forward-seeks over the in-video quiz, even though there is important content in the video after it.
+
+Thus, we observed that users rewatch the regions surrounding in-video quizzes, tend to backseek to review the materials preceding the quiz, and do not forward-seek over quizzes.
+
+% Thus, we observed that users rewatch regions surrounding in-video quizzes, backseek to review the materials preceding the quiz, and do not seek over quizzes. % Now, we will analyze all 113 videos and 109 in-video quizzes to show that these trends are general to the course. % to avoid taking them.
+
+% Thus, we observed that users rewatch the regions surrounding in-video quizzes, tend to backseek to review the materials preceding the quiz, and do not forward-seek over quizzes. Now, we will analyze all 113 videos and 109 in-video quizzes to show that these trends are general to the course. % to avoid taking them.
 
 % Our findings in this section suggest that users tend to attribute importance to in-video quizzes, because they rewatch the regions surrounding them, tend to backseek to review the materials preceding the quiz, and do not forward-seek over quizzes to avoid taking them.
 
@@ -349,12 +357,14 @@ Because Coursera does not require users to take in-video quizzes, we wondered wh
 
 %Now, let us go beyond looking at individual videos and in-video quizzes, and visualize the seek chains across all 113 videos and 109 in-video quizzes in the course.
 
-Now, we will look at the seek chains across all 113 videos and 109 in-video quizzes in the course.
+% Now, we will look at the seek chains across all 113 videos and 109 in-video quizzes in the course.
 
 %\pagebreak
 
 %\section{Analysis of Seek Chains by Visualizing Seeking over All Videos}
-\section{Visualizing Seeking over All Videos}
+\section{Analyzing Seek Chains across All Videos}
+
+In this section, we will analyze users' navigation behavior in aggregate across all 113 videos and 109 in-video quizzes.
 
 \subsection{Forward Seeking to In-Video Quizzes}
 
@@ -387,7 +397,7 @@ As we can see in \autoref{fig:back-seek-sources-allvideos}, there are many seeks
 \label{fig:parts-skipped-back-over-allvideos}
 \end{figure}
 
-As we saw in \autoref{fig:parts-skipped-back-over-allvideos} and \autoref{fig:seek-sources-and-destinations-table}, in-video quizzes are a major source of backward seek chains. As we can see in \autoref{fig:parts-skipped-back-over-allvideos}, if we look at all portions of the video that are skipped backwards over by seek chains, it is primarily the segments preceding the in-video quizzes. This can be explained by users searching in the preceding segment for the answer to the in-video quiz. We suspect that the portion of the video that is seeked backwards over may reflect where the portion of the video relevant to answering the in-video quiz can be found.
+As we saw in \autoref{fig:parts-skipped-back-over-allvideos} and \autoref{fig:seek-sources-and-destinations-table}, in-video quizzes are a major source of backward seek chains. As we can see in \autoref{fig:parts-skipped-back-over-allvideos}, if we look at all portions of the video that are skipped backwards over by seek chains, it is primarily the segments preceding the in-video quizzes. This can be explained by users searching in the preceding segment for the answer to the in-video quiz. % We suspect that the portion of the video that is seeked backwards over may reflect where the portion of the video relevant to answering the in-video quiz can be found.
 
 Interestingly, we observe that when the last in-video quiz occurs at the midpoint of a video, as is the case with Lecture 19 in \autoref{fig:parts-skipped-back-over-allvideos}, there is little back-seeking which occurs after the quiz. This suggests that the back-seeking phenomenon which occurs directly before a quiz is indeed a result of the in-video quiz causing users to seek backwards more, as opposed to being a side-effect of in-video quizzes tending to occur near the end of the video.
 
@@ -474,7 +484,9 @@ It turns out that the former strategy -- of seeing the in-video quiz, and seekin
 
 3.0\% of backwards seeking from the in-video quiz occurs after the user submitted a correct response. These users are presumably just reviewing the video for purposes other than to answer the in-video quiz. In the remaining 19.4\% of backwards seek chains starting from in-video quizzes, the user saw the question, but will never submit any answer to it.
 
-Thus, most (75\%) backwards seek chains from in-video quizzes occur before the user answers the quiz correctly and are followed by an answer attempt within the next 30 minutes, while only 3\% occur after the user submits a correct answer. This further lends support to the idea that users' objectives for their backwards seek chains is to review the preceding section to help them answer the in-video quiz.
+Thus, most (75\%) backwards seek chains from in-video quizzes occur before the user answers the quiz correctly and are followed by an answer attempt within the next 30 minutes, while only 3\% occur after the user submits a correct answer. This suggests that the reason why users seek backward from in-video quizzes is to review the preceding section to help them answer the in-video quiz.
+
+% Thus, most (75\%) backwards seek chains from in-video quizzes occur before the user answers the quiz correctly and are followed by an answer attempt within the next 30 minutes, while only 3\% occur after the user submits a correct answer. This further lends support to the idea that users' objectives for their backwards seek chains is to review the preceding section to help them answer the in-video quiz.
 
 \begin{figure}
 %\centering
@@ -495,7 +507,7 @@ We found that users engage heavily with in-video quizzes, with a similar fractio
 \item There are peaks in rewatching behavior in the regions surrounding the in-video quiz. In particular, we see a large amount of back-seeking from in-video quizzes to the immediately preceding video section. This is likely due to users seeking answers to in-video quizzes.
 % \item Many users skip directly to the in-video quizzes during rewatching sessions. Hence, they may be using these as a way to test themselves, to determine whether or not they need to review that video. 
 \item Users do not tend to skip forwards or backwards over in-video quizzes. They thus segment the video into isolated subsections that users rarely seek between.
-\item In-video quizzes are a common source of seek chains within videos. Users tend to seek backward to find answers, or forward to the next in-video quiz.
+\item In-video quizzes are a common source of seek chains within videos. Users tend to seek backward to the preceding section. % , or forward to the next in-video quiz.
 \item In-video quizzes are a common destination of seek chains within videos. Users most commonly seek from the preceding video segment where the answer can be found.
 \item Some users follow quiz-oriented navigation strategies, jumping straight to the quiz from the beginning of the video, or jumping from one in-video quiz to the next.
 \item In-video dropout is lower on lectures that have in-video quizzes, compared to lectures that lack in-video quizzes.
