@@ -434,9 +434,15 @@ In \autoref{fig:activity-level-vs-quizzes}, we compare engagement metrics in vid
 
 That said, even though this data suggests that in-video dropout is lower in lectures with in-video quizzes, it does not show that the presence of the in-video quizzes is causing this effect. It may simply be case that the lectures that have in-video quizzes also happen to be the more engaging ones.
 
-\section{How long do users spend on in-video quizzes?}
+% \section{How long do users spend on in-video quizzes?}
 
-In this section, we will look at the time spent on answering in-video quizzes, and the number of attempts users make to answer them. As shown in \autoref{fig:time-spent-on-quizzes}, 76.0\% of users will answer the in-video quiz correctly on the first try.
+% \section{How many times do users attempt in-video quizzes?}
+
+\section{How much effort do users invest in answering in-video quizzes?}
+
+In this section, we will look at how many attempts users make to answer in-video quizzes, and how much time they spend between attempts. As shown in \autoref{fig:time-spent-on-quizzes}, 76.0\% of users will answer the in-video quiz correctly on their first try.
+
+% In this section, we will look at the time spent on answering in-video quizzes, and the number of attempts users make to answer them. As shown in \autoref{fig:time-spent-on-quizzes}, 76.0\% of users will answer the in-video quiz correctly on the first try.
 
 % (and 78.1\% will eventually submit a correct answer)
 
@@ -446,6 +452,7 @@ Users who submit an incorrect answer and never submit a correct answer submit an
 
 Let us now return to the users who first submit an incorrect answer but later (within the next 30 minutes) submit a correct answer. Between the period when a user submits the incorrect answer and when they submit the correct answer, 9.1\% of these users will make a seek. Among those, 97\% seek backward, while 3\% seek forward. The users who make a seek will spend a median of 115 seconds (mean=218, $\sigma$=278) before they submit a correct answer. As indicated by the backwards seek chain, the user is presumably using this time to review the preceding section. In contrast, the users who do not seek spend a median of 11 seconds (mean=23, $\sigma$=53) before submitting a correct answer.
 
+Thus, most users who attempt an in-video quiz (94.4\%) will submit a correct answer within 30 minutes, with the majority answering correctly on their first try.  However, most users who answer incorrectly simply answer again within the next 13 seconds, without referring to the rest of the video. % Even though Coursera shows users the correct answer, few users appear to be following this strategy. 
 
 \begin{figure}
 %\centering
@@ -459,15 +466,15 @@ Let us now return to the users who first submit an incorrect answer but later (w
 
 \section{When and why do users seek backwards from in-video quizzes?}
 
-There are several possibilities for when backwards seek chains could occur relative to in-video quiz answering. Users might see the in-video quiz, realize they don't know the answer, and then seek back to review the preceding section. Or, users might try answering the in-video quiz, get the answer wrong, and then seek back to the review the preceding section. We sought to see which of these reviewing strategies are most widely used, as shown in \autoref{fig:backseeks-and-quizzes}.
+There are several possibilities for when backwards seek chains could occur in the context of in-video quizzes. Users might see the in-video quiz, realize they don't know the answer, and then seek back to review the preceding section. Or, users might try answering the in-video quiz, get the answer wrong, and then seek back to the review the preceding section. We sought to see which of these reviewing strategies are most widely used, as shown in \autoref{fig:backseeks-and-quizzes}.
 
 It turns out that the former strategy -- of seeing the in-video quiz, and seeking back to review before attempting to answer the quiz -- is the most widely used. Of all backwards-seeking that occurs starting from an in-video quiz, a total of 60.5\% actually occurs before the user attempts to answer the in-video quiz (but after they have seen the question). Of these, after the user returns to the in-video quiz, they will answer it correctly 62.4\% of the time. It is rather peculiar that this is lower than the overall rate at which users correctly answer quizzes on their first attempt (76.0\%); one potential explanation is that the learners who needed to review the preceding section did not understand the material as well as those who felt they could answer the quiz as soon as they saw it.
 
 14.4\% of backwards seeking from the in-video quiz occurs after the user submitted an incorrect response. Of these, 81.8\% will eventually submit a correct response after reviewing, 9.4\% will submit at least one more incorrect response but will never submit the correct response, and 8.8\% will never attempt the problem again.
 
-3.0\% of backwards seeking from the in-video quiz occurs after the user submitted a correct response. These users are presumably just reviewing the video for purposes other than to answer the in-video quiz.
+3.0\% of backwards seeking from the in-video quiz occurs after the user submitted a correct response. These users are presumably just reviewing the video for purposes other than to answer the in-video quiz. In the remaining 19.4\% of backwards seek chains starting from in-video quizzes, the user saw the question, but will never submit any answer to it.
 
-For the remaining 19.4\% of backwards seek chains starting from in-video quizzes, the user saw the question, but never submitted any answer to it.
+Thus, most (75\%) backwards seek chains from in-video quizzes occur before the user answers the quiz correctly and are followed by an answer attempt within the next 30 minutes, while only 3\% occur after the user submits a correct answer. This further lends support to the idea that users' objectives for their backwards seek chains is to review the preceding section to help them answer the in-video quiz.
 
 \begin{figure}
 %\centering
@@ -478,9 +485,11 @@ For the remaining 19.4\% of backwards seek chains starting from in-video quizzes
 
 \section{Discussion and Conclusion}
 
-In this paper we sought to characterize the ways in which users engage with in-video quizzes, and how they effect users' video viewing behavior. We did so by analyzing the viewing logs of videos in the Machine Learning course on Coursera.
+In this paper we sought to characterize the ways in which users engage with in-video quizzes, and how they effect users' video viewing behavior. We did so by analyzing the video viewing logs in Coursera's Machine Learning course.
 
-We found that unlike external assessments, users engage heavily with in-video quizzes, with a similar fraction of learners answering in-video quizzes as those who finish watching videos, as shown in \autoref{fig:user-engagement-with-material}. We also found certain video viewing patterns emerge in regions surrounding in-video quizzes, specifically: % in-video quizzes are major sources and destinations of seek chains. Based on the sources and destinations of seek chains going to/from in-video quizzes, the seeking behaviors that we observe around in-video quizzes include:
+We found that users engage heavily with in-video quizzes, with a similar fraction of learners answering in-video quizzes as those who finish watching videos, as shown in \autoref{fig:user-engagement-with-material}. We also found certain video viewing patterns emerge in regions surrounding in-video quizzes, specifically: % in-video quizzes are major sources and destinations of seek chains. Based on the sources and destinations of seek chains going to/from in-video quizzes, the seeking behaviors that we observe around in-video quizzes include:
+
+% We found that unlike external assessments, users engage heavily with in-video quizzes, with a similar fraction of learners answering in-video quizzes as those who finish watching videos, as shown in \autoref{fig:user-engagement-with-material}. We also found certain video viewing patterns emerge in regions surrounding in-video quizzes, specifically: % in-video quizzes are major sources and destinations of seek chains. Based on the sources and destinations of seek chains going to/from in-video quizzes, the seeking behaviors that we observe around in-video quizzes include:
 
 \begin{compactitem}
 \item There are peaks in rewatching behavior in the regions surrounding the in-video quiz. In particular, we see a large amount of back-seeking from in-video quizzes to the immediately preceding video section. This is likely due to users seeking answers to in-video quizzes.
@@ -515,9 +524,7 @@ Our results suggest future work investigating the effects of in-video quizzes on
 
 %\pagebreak
 
-The peaks in seeking towards in-video quizzes suggest a number of possible interface modifications that could be explored. Coursera currently does not allow users to easily skip directly to in-video quizzes, instead requiring them to go to the preceding few seconds of videos. Since in-video quizzes were one of the most common destinations for seek chains, particularly in the forward direction, one might investigate the effects of modifying the interface to make it easier to seek to in-video quizzes.
-
-We also observed that users often seek back from in-video quizzes to the preceding section, upon seeing the in-video quiz. Hence, another interface modification that may be worth exploring is to let users preview the in-video quizzes, and see whether this allows them to navigate the lecture more effectively. % on users' video navigation behavior. % We also observed that users tend to revisit in-video quizzes during rewatching sessions. This suggests that it may be beneficial if users had an easy way to refer back to the in-video quizzes they had previously encountered while reviewing.
+The peaks in seeking towards in-video quizzes suggest a number of possible interface modifications that could be explored. Coursera currently does not allow users to easily skip directly to in-video quizzes, instead requiring them to go to the preceding few seconds of videos. Since in-video quizzes were one of the most common destinations for seek chains, particularly in the forward direction, one might investigate the effects of modifying the interface to make it easier to seek to in-video quizzes. We also observed that users often seek back from in-video quizzes to the preceding section, upon seeing the in-video quiz. Hence, another interface modification that may be worth exploring is to let users preview the in-video quizzes, and see whether this allows them to navigate the lecture more effectively. % on users' video navigation behavior. % We also observed that users tend to revisit in-video quizzes during rewatching sessions. This suggests that it may be beneficial if users had an easy way to refer back to the in-video quizzes they had previously encountered while reviewing.
 
 In-video quizzes have many appeals, such as the potential for improving engagement by making lectures more interactive and enabling users to test their understanding of the material. We have examined users' interaction patterns with lecture videos in the context of Coursera's in-video quizzes, and hope that our findings can inform future improvements to the design of interactive lecture-viewing systems.
 
