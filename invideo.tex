@@ -138,7 +138,7 @@ In this paper, we aim to learn more about how learners engage with in-video quiz
 % In this paper, we analyze video-viewing logs of the fourth iteration of the Machine Learning course on Coursera (ML4). We discuss a set of video viewing behaviors associated with in-video quizzes that we observe in these logs, specifically:
 
 \begin{compactitem}
-\item Users engage with in-video quizzes -- among lectures with in-video quizzes, 74\% of viewers will attempt a quiz. %-- a similar number attempt quizzes to those who finish watching lectures.
+\item Users engage heavily with in-video quizzes -- in lectures with quizzes, 74\% of viewers will attempt to answer one. %-- a similar number attempt quizzes to those who finish watching lectures.
 % \item Users commonly seek forward to the region preceding each in-video quiz, and seek backwards from in-video quizzes to review the preceding section.
 \item Users commonly seek forward to in-video quizzes, and seek backwards from in-video quizzes.
 \item Most backwards seeks from in-video quizzes occur after the user has seen the question, but before they answer it. This suggests that users are reviewing the preceding section to help them answer the quiz. % This suggests that users are reviewing the preceding section to help them answer the quiz.
@@ -146,7 +146,7 @@ In this paper, we aim to learn more about how learners engage with in-video quiz
 \item Users do not tend to skip over in-video quizzes, either in the forward or backward direction. %The quizzes thus segment the video into subunits that users do not skip between.
 \item Users sometimes jump directly from the start of the video to in-video quizzes, or jump from one quiz to the next. %, skipping the video segments.
 \item Most users answer in-video quizzes correctly, with 76\% answering correctly on their first try.
-\item In-video dropout is lower on lectures that have in-video quizzes, compared to lectures that lack in-video quizzes.
+\item In-video dropout is lower in lectures that have in-video quizzes, compared to lectures that lack in-video quizzes.
 % \item Most seeking back and reviewing starting from in-video quizzes occurs after the user has seen the question, but before they attempt to answer it.
 \end{compactitem}
 
@@ -204,7 +204,7 @@ Engagement with in-video quizzes is high: as shown in \autoref{fig:user-engageme
 % If we look at the 92 videos that have in-video quizzes, X% of viewers who start watching the video will answer the in-video quiz, whereas only Y% will watch the video to the end.
 % computation in summary statistics quiz answering among videos with quizzes vs finishing
 
-Certificate-earners (users who earned 80\% of the points -- note that in-video quizzes and lecture viewing do not count towards grades) also engage heavily with in-video quizzes, as shown in \autoref{fig:user-engagement-certificate}. If we look at the 92 videos that have one in-video quiz, 79\% of certificate-earning learners who begin watching a video submit an answer to its in-video quiz, whereas only 72\% watch it to completion. That said, even certificate earners skip a few videos and in-video quizzes; the ones they tend to skip are optional lectures, early material reviewing prerequisite math such as matrices, and tutorial videos about Octave (a software package used by the course).
+Certificate-earners (users who earned a grade of at least 80\% -- note that in-video quizzes and lecture viewing do not count towards grades) also engage heavily with in-video quizzes, as shown in \autoref{fig:user-engagement-certificate}. If we look at the 92 videos that have one in-video quiz, 79\% of certificate-earning learners who begin watching a video submit an answer to its in-video quiz, whereas only 72\% watch it to completion. That said, even certificate earners skip a few videos and in-video quizzes; the ones they tend to skip are optional lectures, early material reviewing prerequisite math such as matrices, and tutorial videos about Octave (a software package used by the course).
 
 Other summary statistics are shown in \autoref{fig:summary-statistics}. Coursera provides users the ability to download videos and view them offline -- meaning they will not see in-video quizzes, and their viewing activity will not appear in the logs. However, as we see in \autoref{fig:summary-statistics}, the number of users who download videos is less than half of those that view videos online. 
 
@@ -540,7 +540,7 @@ We found that users engage heavily with in-video quizzes, with a similar fractio
 % We found that unlike external assessments, users engage heavily with in-video quizzes, with a similar fraction of learners answering in-video quizzes as those who finish watching videos, as shown in \autoref{fig:user-engagement-with-material}. We also found certain video viewing patterns emerge in regions surrounding in-video quizzes, specifically: % in-video quizzes are major sources and destinations of seek chains. Based on the sources and destinations of seek chains going to/from in-video quizzes, the seeking behaviors that we observe around in-video quizzes include:
 
 \begin{compactitem}
-\item Users engage highly with in-video quizzes -- in lectures containing them, 74\% of viewers will answer the quiz.
+\item Users engage heavily with in-video quizzes -- in lectures containing them, 74\% of viewers will answer the quiz.
 \item There are peaks in seeking and rewatching activity in the regions surrounding the in-video quiz. % In particular, we see a large amount of back-seeking from in-video quizzes to the immediately preceding video section. % This is likely due to users seeking answers to in-video quizzes.
 % \item Many users skip directly to the in-video quizzes during rewatching sessions. Hence, they may be using these as a way to test themselves, to determine whether or not they need to review that video. 
 \item In-video quizzes are a common source of seek chains within videos. Users most frequently seek backward from the in-video quiz to the preceding section. Most backwards seek chains from in-video quizzes occur after the user has seen the question, but before they answer it. This suggests that users are reviewing the preceding section to help them answer the quiz. %in search of an answer. % , or forward to the next in-video quiz.
@@ -548,7 +548,7 @@ We found that users engage heavily with in-video quizzes, with a similar fractio
 \item In-video quizzes are a common destination of seek chains. Users most commonly seek from the preceding video segment, which contains material relevant to the quiz.
 \item Users do not tend to skip forwards or backwards over in-video quizzes. They thus segment the video into isolated subsections that users rarely seek between.
 \item Some users follow quiz-oriented navigation strategies, jumping straight to the quiz from the beginning of the video, or jumping from one in-video quiz to the next.
-\item In-video dropout is lower on lectures that have in-video quizzes, compared to lectures that lack in-video quizzes.
+\item In-video dropout is lower in lectures that have in-video quizzes, compared to lectures that lack in-video quizzes.
 \item Most users answer in-video quizzes correctly on the first try. Among those who answer incorrectly, the median time until they answer correctly is just 13 seconds.
 % \item Most backwards seek chains from in-video quizzes occur after the user has seen the question, but before they answer it. This suggests that users are reviewing the preceding section to help them answer the quiz.
 \end{compactitem}
