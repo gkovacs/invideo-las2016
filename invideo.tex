@@ -114,9 +114,9 @@ Online courses on sites such as Coursera use quizzes embedded inside lecture vid
 
 \section{Introduction}
 
-In-video quizzes are short, automatically-graded questions that are shown to users upon reaching a certain point in a lecture video, as shown in \autoref{fig:coursera}. They are commonly found in MOOCs (Massive Open Online Courses) on platforms such as Coursera.
+In-video quizzes are short, automatically-graded questions shown to users upon reaching a certain point in a lecture video, as shown in \autoref{fig:coursera}. They are commonly found in MOOCs on Coursera. % Coursera's MOOCs (Massive Open Online Courses). % on platforms such as Coursera.
 
-In-video quizzes are beneficial because they provide learners with a way to test themselves on the material, which helps long-term retention (a finding known as the \emph{testing effect}) \cite{testingeffect}. They are particularly valuable in the context of MOOCs, because many learners engage primarily with videos and do not engage with assignments or exams \cite{renedisengagement} \cite{ashton}.
+In-video quizzes are beneficial because they provide learners with a way to test themselves on the material, which helps long-term retention (a finding known as the \emph{testing effect}) \cite{testingeffect}. They are particularly valuable in the context of MOOCs, because many learners interact primarily with videos and do not engage with assignments or exams \cite{renedisengagement} \cite{ashton}.
 
 % the majority we observe in courses like Coursera's Machine Learning course are either multiple-choice or multiple-checkbox, though there also exist a few numeric free-response quizzes.
 
@@ -138,13 +138,14 @@ In this paper, we aim to learn more about how learners engage with in-video quiz
 % In this paper, we analyze video-viewing logs of the fourth iteration of the Machine Learning course on Coursera (ML4). We discuss a set of video viewing behaviors associated with in-video quizzes that we observe in these logs, specifically:
 
 \begin{compactitem}
-\item Users engage with in-video quizzes -- a similar number attempt quizzes to those who finish watching lectures.
+\item Users engage with in-video quizzes -- among lectures with in-video quizzes, 74\% of viewers will attempt a quiz. %-- a similar number attempt quizzes to those who finish watching lectures.
 \item Users commonly seek forward to the region preceding each in-video quiz, and seek backwards from in-video quizzes to review the preceding section.
 \item Users sometimes jump directly from the start of the video to in-video quizzes, or jump from one in-video quiz to the next, skipping the video segments.
 \item Users do not tend to skip over in-video quizzes, either in the forward or backward direction. %The quizzes thus segment the video into subunits that users do not skip between.
 \item In-video dropout is lower on lectures that have in-video quizzes, compared to lectures that lack in-video quizzes.
-\item Most users correctly answer in-video quizzes.
-\item Most seeking back and reviewing starting from in-video quizzes occurs after the user has seen the question, but before they attempt to answer it.
+\item Most users answer in-video quizzes correctly, with 76\% answering correctly on their first try.
+\item Most backwards seeks from in-video quizzes occur after the user has seen the question, but before they answer it. % This suggests that users are reviewing the preceding section to prepare for the in-video quiz.
+% \item Most seeking back and reviewing starting from in-video quizzes occurs after the user has seen the question, but before they attempt to answer it.
 \end{compactitem}
 
 % These behaviors suggest that viewers consider in-video quizzes to be a priority and frequently refer to them. These quiz-centric viewing behaviors can inform the design of future MOOC lecture-viewing interfaces, to make it easier for users to engage with in-video quizzes while viewing videos. % refer back to in-video quizzes while viewing and reviewing videos. % between in-video quizzes and the preceding segment where the answers can be found.
