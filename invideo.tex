@@ -28,6 +28,7 @@ Include the http://DOI string/url which is specific for your submission and incl
 
 % custom packages
 \usepackage{paralist}
+%\usepackage{caption}
 
 % llt: Define a global style for URLs, rather that the default one
 \makeatletter
@@ -166,7 +167,8 @@ Of the 113 videos, 92 videos (81\%) have 1 in-video quiz, 14 videos (12\%) have 
 \begin{figure}
 %\centering
 \includegraphics[width=1.0\columnwidth]{summary-statistics}
-\caption{Summary statistics for the ML4 course.}
+% \caption{Table 1: Summary statistics for the ML4 course.}
+\small{\textbf{Table 1: Summary statistics for the ML4 course.}}
 \label{fig:summary-statistics}
 \end{figure}
 
@@ -191,7 +193,7 @@ Engagement with in-video quizzes is high: as shown in \autoref{fig:user-engageme
 
 Certificate-earners (users who earned a grade of at least 80\% -- note that in-video quizzes and lecture viewing do not count towards grades) also engage heavily with in-video quizzes, as shown in \autoref{fig:user-engagement-certificate}. If we look at the 92 videos that have one in-video quiz, 79\% of certificate-earning learners who begin watching a video submit an answer to its in-video quiz, whereas only 72\% watch it to completion. That said, even certificate earners skip a few videos and in-video quizzes; the ones they tend to skip are optional lectures, early material reviewing prerequisite math such as matrices, and tutorial videos about Octave (a software package used by the course).
 
-Other summary statistics are shown in \autoref{fig:summary-statistics}. Coursera provides users the ability to download videos and view them offline -- meaning they will not see in-video quizzes, and their viewing activity will not appear in the logs. However, as we see in \autoref{fig:summary-statistics}, the number of users who download videos is less than half of those that view videos online. 
+Other summary statistics are shown in Table 1. Coursera provides users the ability to download videos and view them offline -- meaning they will not see in-video quizzes, and their viewing activity will not appear in the logs. However, as we see in \autoref{fig:summary-statistics}, the number of users who download videos is less than half of those that view videos online. 
 
 % We use viewing logs observed on lectures from ML4 to illustrate certain phenomenon we found to hold true across a wide sample of videos in ML4. One of the lectures we use in our examples is Lecture 68: Error Metrics for Skewed Classes, a 12-minute video containing a single in-video quiz which asks for a free-response numeric answer. Another is Lecture 13: Matrices and vectors, a 9-minute video containing two in-video quizzes, of which the first is multiple-selection (4 checkboxes), and the second is multiple-choice (4 radioboxes).
 
