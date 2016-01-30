@@ -252,7 +252,7 @@ Since Coursera's logs do not record when a user closes their browser window or t
 
 \subsection{Sources and Destinations of Seek Chains}
 
-The sources and destinations of seek chains are shown in Table 2. We see that in-video quizzes are a popular destination of seeks, particularly in the forward direction -- users seek forward to the in-video quiz at 4x the baseline rate of all seek chain destinations. Given the high answering rate for in-video quizzes we showed in \autoref{fig:user-engagement-with-material}, this suggests that these seeks originate from users who want to answer the in-video quiz at that point. Note that Coursera's interface does not have any UI features for seeking to in-video quizzes apart from the progress bar, so the only way to reach the in-video quiz is to seek to a segment of video right before it. Hence, we consider seek chains which terminate at most 10 seconds before the in-video quiz to represent users intending to jump to the in-video quiz.
+The sources and destinations of seek chains are shown in Table 2. We see that in-video quizzes are a popular destination of seeks, particularly in the forward direction -- users seek forward to an in-video quiz at 4x the baseline rate of all seek chain destinations. In other words, users are 4 times more likely to seek to the second of video where an in-video quiz is located, than to an arbitrary second of video. Given the high answering rate for in-video quizzes we showed in \autoref{fig:user-engagement-with-material}, this suggests that these seeks originate from users who want to answer the in-video quiz at that point. Note that Coursera's interface does not have any UI features for seeking to in-video quizzes apart from the progress bar, so the only way to reach the in-video quiz is to seek to a segment of video right before it. Hence, we consider seek chains which terminate at most 10 seconds before the in-video quiz to represent users intending to jump to the in-video quiz. We normalized this value by the length of the seek target -- 10 seconds -- so the unit of all measurements is seeks per second of video.
 
 Users also seek backward from in-video quizzes at 55x the baseline rate. As we will show, these represent users reviewing the preceding section, likely trying to find material that will help them answer the in-video quiz. % find answers to the in-video quiz.
 
@@ -380,12 +380,12 @@ In this section, we analyze seek chains in all videos to learn how in-video quiz
 
 \subsection{Forward Seeking to In-Video Quizzes}
 
-\begin{figure}
+%\begin{figure}
 %\centering
-\includegraphics[width=1.0\columnwidth]{back-seek-sources-allvideos}
-\caption{Sources of backward seeks. Red dots indicate in-video quizzes. In-video quizzes are a major source of backward seeks, due to users going back to the previous section to review the video.}
-\label{fig:back-seek-sources-allvideos}
-\end{figure}
+%\includegraphics[width=1.0\columnwidth]{back-seek-sources-allvideos}
+%\caption{Sources of backward seeks. Red dots indicate in-video quizzes. In-video quizzes are a major source of backward seeks, due to users going back to the previous section to review the video.}
+%\label{fig:back-seek-sources-allvideos}
+%\end{figure}
 
 \autoref{fig:forward-seek-destinations-allvideos} shows the destinations of forward seeks for each of the 113 videos in the course. Each horizontal line represents a video, where darker shades indicate more seek chains going to a particular segment of the video. We label the locations of in-video quizzes (red) and slide transitions (green). %We denote the locations of in-video quizzes (red dots) and slide transitions (green diamonds).
 
@@ -400,9 +400,9 @@ If we look at lectures 25-30 in \autoref{fig:forward-seek-destinations-allvideos
 % \pagebreak
 
 %\subsection{In-Video Quizzes are a Major Source of Back Seeks (Reviewing)}
-\subsection{In-Video Quizzes are a Major Source of Backward Seeks}
+%\subsection{In-Video Quizzes are a Major Source of Backward Seeks}
 
-As we can see in \autoref{fig:back-seek-sources-allvideos}, there are many seeks in the backward direction that start from the in-video quizzes (red circles). Specifically, as shown in Table 2, the rate of backward seek chains from in-video quizzes is 55 times higher than the baseline rate. We also see peaks in backward seeks after slide boundaries (green diamonds), which confirms prior findings of interaction peaks at slide boundaries in EdX videos which lack in-video quizzes \cite{juho}.
+%As we can see in \autoref{fig:back-seek-sources-allvideos}, there are many seeks in the backward direction that start from the in-video quizzes (red circles). Specifically, as shown in Table 2, the rate of backward seek chains from in-video quizzes is 55 times higher than the baseline rate. We also see peaks in backward seeks after slide boundaries (green diamonds), which confirms prior findings of interaction peaks at slide boundaries in EdX videos which lack in-video quizzes \cite{juho}.
 
 \subsection{Video Parts Skipped Back Over}
 
@@ -420,16 +420,16 @@ Interestingly, we observe that when the last in-video quiz occurs at the midpoin
 
 % \pagebreak
 
-\subsection{Seek Destinations from In-Video Quizzes}
+% \subsection{Seek Destinations from In-Video Quizzes}
 
-\begin{figure}
+% \begin{figure}
 %\centering
-\includegraphics[width=1.0\columnwidth]{seek-destinations-from-first-quiz-allvideos}
-\caption{Seek destinations from the first in-video quiz in each lecture. The portion preceding the in-video quiz is a major seek destination, which is often where the answer to the quiz can be found.}
-\label{fig:seek-destinations-from-first-quiz-allvideos}
-\end{figure}
+% \includegraphics[width=1.0\columnwidth]{seek-destinations-from-first-quiz-allvideos}
+% \caption{Seek destinations from the first in-video quiz in each lecture. The portion preceding the in-video quiz is a major seek destination, which is often where the answer to the quiz can be found.}
+% \label{fig:seek-destinations-from-first-quiz-allvideos}
+% \end{figure}
 
-As we can see in \autoref{fig:seek-destinations-from-first-quiz-allvideos}, the seek destinations from in-video quizzes are primarily backwards, towards the immediately preceding portion. This is confirmed in Table 2, which shows that there are over 10x more seeks in the backward direction from in-video quizzes than in the forward direction. This can be interpreted as users deciding to go back and review the preceding segment in response to having seen the in-video quiz.
+% As we can see in \autoref{fig:seek-destinations-from-first-quiz-allvideos}, the seek destinations from in-video quizzes are primarily backwards, towards the immediately preceding portion. This is confirmed in Table 2, which shows that there are over 10x more seeks in the backward direction from in-video quizzes than in the forward direction. This can be interpreted as users deciding to go back and review the preceding segment in response to having seen the in-video quiz.
 
 %\pagebreak
 
@@ -446,16 +446,9 @@ As we can see in \autoref{fig:seek-destinations-from-start-allvideos}, many user
 
 % \section{Engagement with videos depending on the presence of in-video quizzes}
 
-\pagebreak
+%\pagebreak
 
 \section{Do lectures with in-video quizzes have higher engagement and lower in-video dropoff?}
-
-\begin{figure}
-%\centering
-\includegraphics[width=1.0\columnwidth]{activity-level-vs-quizzes}
-\small{\textbf{Table 4. Users watch a larger portion of lecture videos that contain in-video quizzes during viewing sessions, and have more seeking activity.}}
-\label{fig:activity-level-vs-quizzes}
-\end{figure}
 
 We saw previously that there are bursts in seeking, viewing, and reviewing near in-video quizzes. This leads us to ask whether lectures with in-video quizzes have higher engagement (viewing and seeking), and lower in-video dropoff. %, as reflected by increased viewing and seeking, and decreased in-video dropoff.
 
@@ -470,6 +463,13 @@ That said, although this data suggests that in-video dropout is lower in lecture
 % \section{How long do users spend on in-video quizzes?}
 
 % \section{How many times do users attempt in-video quizzes?}
+
+\begin{figure}
+%\centering
+\includegraphics[width=1.0\columnwidth]{activity-level-vs-quizzes}
+\small{\textbf{Table 4. Users watch a larger portion of lecture videos that contain in-video quizzes during viewing sessions, and have more seeking activity.}}
+\label{fig:activity-level-vs-quizzes}
+\end{figure}
 
 \section{How much effort do users invest in answering in-video quizzes?}
 
